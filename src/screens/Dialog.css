@@ -20,6 +20,10 @@
     position: absolute;
     right: 10px;
     top: 10px;
+    background-image: url('../icons/close.svg');
+    background-size: contain;
+    width:20px;
+    height: 20px;
 }
 
 .titleText {

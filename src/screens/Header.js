@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './Header.css';
 import Login from './Login';
+import Logout from './Logout';
 
 function HeaderMenu(props){
     const menus = props.menus;
@@ -34,7 +35,7 @@ function LogInIcon(props){
 
 function LogOutIcon(props){
     return (
-        <div className={styles.logOut} title={props.value}></div>
+        <div className={styles.logOut} onClick={props.showLogOut} title={props.value}></div>
     )
 }
 
@@ -42,26 +43,30 @@ class Header extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isShow: false
+            isShowLogin: false,
+            isShowLogout:false
         }
-        this.clickHandle = this.clickHandle.bind(this);
+        this.clickLogInHandle = this.clickLogInHandle.bind(this);
+        this.clickLogOutHandle = this.clickLogOutHandle.bind(this);
     }
-    clickHandle() {
-        this.setState({ isShow: true });
+    clickLogInHandle() {
+        this.setState({ isShowLogin: true });
+    }
+    clickLogOutHandle() {
+        this.setState({ isShowLogout: true });
     }
 
     render() {
         return(
             <div className={styles.header}>
-                <BlogTitle name=""/>
-                <LogInIcon value='LogIn' showLogIn={this.clickHandle}/>
-                <Login isShow={this.state.isShow} onClose={() => {this.setState({isShow:false})}}/>
-                <LogOutIcon value='LogOut'/>
+                <BlogTitle name="Jenny's Blog"/>
+                <LogInIcon value='LogIn' showLogIn={this.clickLogInHandle}/>
+                <Login isShow={this.state.isShowLogin} onClose={() => {this.setState({isShowLogin:false})}}/>
+                <LogOutIcon value='LogOut' showLogOut={this.clickLogOutHandle}/>
+                <Logout isShow={this.state.isShowLogout} onClose={() => {this.setState({isShowLogout:false})}}/>
                 <HeaderMenu menus={menuItems}/>
             </div>
         )
     }
 }
 export default Header;
-
-// https://github.com/yanzixi/test/blob/master/app/conponent/Login.jsx

@@ -6,7 +6,33 @@
 }
 .blogTitle{
     color: #7171C6;
+    padding: 10px 0 0 10px;
 }
+
+.logIn{
+    width: 30px;
+    height:30px;
+    background: url('../icons/in.svg');
+    background-size: cover;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+}
+
+.logOut{
+    width: 30px;
+    height:30px;
+    background: url('../icons/out.svg');
+    background-size: cover;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+}
+
 .headerMenu{
     height: auto;
     width: auto;
@@ -15,6 +41,7 @@
     bottom: 0;
 
 }
+
 .headerMenuItem{
     width:100px;
     display: inline-block;

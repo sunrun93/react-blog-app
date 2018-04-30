@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import Dialog from './Dialog';
+import styles from './Login.css';
 
 class Login extends React.Component{
     constructor(props) {
@@ -42,15 +43,18 @@ class Login extends React.Component{
     render(){
         const isShow = this.props.isShow;
         return (
-        <Dialog width="400" height="440" isShow={isShow} onClose={this.props.onClose}>
-            <div className="loginForm">
-                <div className="loginLogo"><img src="../conponent/images/logo.png"/></div>
-                <div className="loginText">
-                    <label style={{color:'#FF0000',fontSize:'10px'}}>{this.state.info}</label>
-                    <input type="text" placeholder="手机号/邮箱" onChange={this.changeText.bind(this)} /><br/>
-                    <input type="password" placeholder="密码" onChange={this.changePassword.bind(this)}/><br/>
-                    <input type="password" placeholder="请再次输入密码" onChange={this.changerePassword.bind(this)}/><br/>
-                    <span className="loginBtn" onClick={this.clickHandle.bind(this)}>登录</span>
+        <Dialog width="300" height="240" isShow={isShow} onClose={this.props.onClose}>
+            <div className={styles.loginForm}>
+                <div className={styles.dialogTitle}>用户登陆</div>
+                <div className={styles.loginInfo}>
+                    <label className={styles.warningInfo}>{this.state.info}</label>
+                    <label className={styles.loginLabel}>用户名</label>
+                    <input className={styles.loginInput} type="text" placeholder="手机号/邮箱" onChange={this.changeText.bind(this)} /><br/>
+                    <label className={styles.loginLabel}>密码</label>
+                    <input className={styles.loginInput} type="password" placeholder="密码" onChange={this.changePassword.bind(this)}/><br/>
+                    <label className={styles.loginLabel}>确认密码</label>
+                    <input className={styles.loginInput} type="password" placeholder="请再次输入密码" onChange={this.changerePassword.bind(this)}/><br/>
+                    <button className={styles.loginBtn} onClick={this.clickHandle.bind(this)}>登 录</button>
                 </div>
             </div>
         </Dialog>

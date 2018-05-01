@@ -3,23 +3,21 @@ import styles from './Header.css';
 import Login from './Login';
 import Logout from './Logout';
 
+let fakedate = require('../data.json');
+
+let menuItems = fakedate.headerMenus;
+
 function HeaderMenu(props){
     const menus = props.menus;
+    const selectedId = props.selectedIndex;
     const menuItemList = menus.map((item)=>
-        <li className={styles.headerMenuItem} key={item.id}>{item.title}</li>
+        <li className={(selectedId==item.id)?styles.selectedHeaderMenuItem:styles.headerMenuItem} 
+        key={item.id} onClick={props.navItemClick.bind(item,item.id)}>{item.title}</li>
     )
     return(
         <ul className={styles.headerMenu}>{menuItemList}</ul>
     )
 }
-
-const menuItems=[
-    {id:'1',title:'Javascript'},
-    {id:'2',title:'HTML+CSS'},
-    {id:'3',title:'React'},
-    {id:'4',title:'Aurelia'},
-    {id:'5',title:'Pictures'}
-    ];
 
 function BlogTitle(props){
     return (
@@ -49,6 +47,7 @@ class Header extends React.Component {
         this.clickLogInHandle = this.clickLogInHandle.bind(this);
         this.clickLogOutHandle = this.clickLogOutHandle.bind(this);
     }
+ 
     clickLogInHandle() {
         this.setState({ isShowLogin: true });
     }
@@ -64,7 +63,7 @@ class Header extends React.Component {
                 <Login isShow={this.state.isShowLogin} onClose={() => {this.setState({isShowLogin:false})}}/>
                 <LogOutIcon value='LogOut' showLogOut={this.clickLogOutHandle}/>
                 <Logout isShow={this.state.isShowLogout} onClose={() => {this.setState({isShowLogout:false})}}/>
-                <HeaderMenu menus={menuItems}/>
+                <HeaderMenu menus={menuItems} selectedIndex={this.props.selectedTitleId} navItemClick={this.props.titleClick}/>
             </div>
         )
     }

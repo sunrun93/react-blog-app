@@ -1,3 +1,98 @@
 {
-    "headerMenus": "[{id:'1',title:'Javascript'},{id:'2',title:'HTML+CSS'},{id:'3',title:'React'},{id:'4',title:'Pictures'}]"
+    "headerMenus": [{"id":"1","title":"Javascript"},
+                    {"id":"2","title":"HTML+CSS"},
+                    {"id":"3","title":"React"},
+                    {"id":"4","title":"Aurelia"},
+                    {"id":"5","title":"Pictures"}],
+    "navItemData":[{"id":"1",
+                    "title": "Javascript",
+                    "nav": [
+                        {
+                            "conId": "1_a",
+                            "content": "1_aaaaa"
+                        },
+                        {
+                            "conId": "1_b",
+                            "content": "1_bbbbb"
+                        },
+                        {
+                            "conId": "1_c",
+                            "content": "1_ccccc"
+                        }
+                    ]
+                },
+                {
+                    "id": "2",
+                    "title": "HTML+CSS",
+                    "nav": [
+                        {
+                            "conId": "2_a",
+                            "content": "2_aaaaa"
+                        },
+                        {
+                            "conId": "2_b",
+                            "content": "2_bbbbb"
+                        },
+                        {
+                            "conId": "2_c",
+                            "content": "2_ccccc"
+                        }
+                    ]
+                },
+                {
+                    "id": "3",
+                    "title": "React",
+                    "nav": [
+                        {
+                            "conId": "3_a",
+                            "content": "3_aaaaa"
+                        },
+                        {
+                            "conId": "3_b",
+                            "content": "3_bbbbb"
+                        },
+                        {
+                            "conId": "3_c",
+                            "content": "3_ccccc"
+                        }
+                    ]
+                },
+                {
+                    "id": "4",
+                    "title": "Aurelia",
+                    "nav": [
+                        {
+                            "conId": "4_a",
+                            "content": "4_aaaaa"
+                        },
+                        {
+                            "conId": "4_b",
+                            "content": "4_bbbbb"
+                        },
+                        {
+                            "conId": "4_c",
+                            "content": "4_ccccc"
+                        }
+                    ]
+                },
+                {
+                    "id": "5",
+                    "title": "Pictures",
+                    "nav": [
+                        {
+                            "conId": "5_a",
+                            "content": "5_aaaaa"
+                        },
+                        {
+                            "conId": "5_b",
+                            "content": "5_bbbbb"
+                        },
+                        {
+                            "conId": "5_c",
+                            "content": "5_ccccc"
+                        }
+                    ]
+                }
+            ],
+    "data":"data"
 }

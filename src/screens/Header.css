@@ -56,7 +56,20 @@
     color: #fff;
 }
 .headerMenuItem:hover{
-    color:#999;
-    background: #B3EE3A;
+    color:#666699;
+    background: #FFCC99;
 
+}
+.selectedHeaderMenuItem{
+     width:100px;
+    display: inline-block;
+    height:30px; 
+     color:#666699;
+    background: #FFCC99;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 20px 0;
+    cursor: pointer;
 }

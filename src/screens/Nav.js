@@ -7,7 +7,7 @@ let navItemData = fakedate.navItemData;
 function NavigationTree(props){
     const navItems = props.navItemData;
     const navItem = navItems.map((item)=>
-        <li key={item.conId}  className={styles.navItem} onClick={props.navItemClick.bind(item,item.conId)}>{item.content}</li>
+        <li key={item.conId}  className={styles.navItem} onClick={props.navItemClick.bind(item,item.conId)}>{item.title}</li>
     )
     return(
         <ul>{navItem}</ul>

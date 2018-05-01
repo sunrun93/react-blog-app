@@ -15,12 +15,13 @@ class App extends Component {
       navItemId:""
     };
     this.handleTitleClick = this.handleTitleClick.bind(this);
+    this.handleNavItemClick = this.handleNavItemClick.bind(this);
   }
   handleTitleClick(titleId){
     console.log(titleId);
     this.setState({
       session: titleId,
-      showPicture: titleId == "5" ? true : false
+      navItemId:""
     })
   }
   handleNavItemClick(navItemId){
@@ -33,7 +34,7 @@ class App extends Component {
       <div className={styles.app}>
         <Header titleClick={this.handleTitleClick} selectedTitleId={this.state.session} />
         <Nav navItemClick={this.handleNavItemClick} navSession={this.state.session} />
-        <Content isPicture={this.state.showPicture} navSession={this.state.session} selectedNavItem={this.state.navItemId}/>
+        <Content navSession={this.state.session} selectedNavItem={this.state.navItemId}/>
       </div>
     );
   }

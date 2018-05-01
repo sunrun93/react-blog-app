@@ -8,17 +8,17 @@
                     "title": "Javascript",
                     "nav": [
                         {
-                            "conId": "1_a",
+                            "id": "1_a",
                             "title":"JavaScript 数据类型",
                             "content": "1_aaaaa"
                         },
                         {
-                            "conId": "1_b",
+                            "id": "1_b",
                             "title":"JavaScript 数组",
                             "content": "1_bbbbb"
                         },
                         {
-                            "conId": "1_c",
+                            "id": "1_c",
                             "title":"JavaScript Ajax",
                             "content": "1_ccccc"
                         }
@@ -29,12 +29,12 @@
                     "title": "HTML+CSS",
                     "nav": [
                         {
-                            "conId": "2_a",
+                            "id": "2_a",
                             "title":"HTML5新标签",
                             "content": "2_aaaaa"
                         },
                         {
-                            "conId": "2_b",
+                            "id": "2_b",
                             "title":"CSS3新特性",
                             "content": "2_bbbbb"
                         }
@@ -45,17 +45,17 @@
                     "title": "React",
                     "nav": [
                         {
-                            "conId": "3_a",
+                            "id": "3_a",
                             "title":"React和JSX",
                             "content": "3_aaaaa"
                         },
                         {
-                            "conId": "3_b",
+                            "id": "3_b",
                             "title":"React和Component",
                             "content": "3_bbbbb"
                         },
                         {
-                            "conId": "3_c",
+                            "id": "3_c",
                             "title":"React的生命周期",
                             "content": "3_ccccc"
                         }
@@ -66,17 +66,17 @@
                     "title": "Aurelia",
                     "nav": [
                         {
-                            "conId": "4_a",
+                            "id": "4_a",
                             "title":"Aurelia简介",
                             "content": "4_aaaaa"
                         },
                         {
-                            "conId": "4_b",
+                            "id": "4_b",
                             "title":"Aurelia template",
                             "content": "4_bbbbb"
                         },
                         {
-                            "conId": "4_c",
+                            "id": "4_c",
                             "title":"Aurelia bindable",
                             "content": "4_ccccc"
                         }
@@ -87,7 +87,7 @@
                     "title": "Pictures",
                     "nav": [
                         {
-                            "conId": "5_a",
+                            "id": "5_a",
                             "title":"Picture",
                             "content": "5_aaaaa"
                         }

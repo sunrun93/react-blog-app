@@ -7,7 +7,7 @@ let navItemData = fakedate.navItemData;
 function NavigationTree(props){
     const navItems = props.navItemData;
     const navItem = navItems.map((item)=>
-        <li key={item.conId}  className={styles.navItem} onClick={props.navItemClick.bind(item,item.conId)}>{item.title}</li>
+        <li key={item.id}  className={styles.navItem} onClick={props.navItemClick.bind(item,item.id)}>{item.title}</li>
     )
     return(
         <ul>{navItem}</ul>
@@ -17,7 +17,6 @@ function NavigationTree(props){
 class Nav extends React.Component{
     constructor(props){
         super(props);
-        this.handleNavItemClick = this.handleNavItemClick.bind(this);
         this.state={
             currentNavItems:navItemData[0].nav,
             navTitle:navItemData[0].title
@@ -31,14 +30,11 @@ class Nav extends React.Component{
             navTitle:navData.title
         })
     }
-    handleNavItemClick(id){
-        console.log(id);
-    }
     render(){
         return(
             <div className={styles.nav}>
                 <h3 className={styles.navTitle}>{this.state.navTitle}</h3>
-                <NavigationTree navItemData={this.state.currentNavItems} navItemClick={this.handleNavItemClick}/>
+                <NavigationTree navItemData={this.state.currentNavItems} navItemClick={this.props.navItemClick}/>
             </div>
         )
     }

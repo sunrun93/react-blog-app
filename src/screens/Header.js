@@ -58,7 +58,7 @@ class Header extends React.Component {
     render() {
         return(
             <div className={styles.header}>
-                <BlogTitle name="Jenny's Blog"/>
+                <BlogTitle name="Blog"/>
                 <LogInIcon value='LogIn' showLogIn={this.clickLogInHandle}/>
                 <Login isShow={this.state.isShowLogin} onClose={() => {this.setState({isShowLogin:false})}}/>
                 <LogOutIcon value='LogOut' showLogOut={this.clickLogOutHandle}/>

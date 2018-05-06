@@ -14,7 +14,7 @@ function ContentDetail(props) {
             (
                 <PictureTab />
             ) : (
-                <ArticleTab articleData={props.articleData} />
+                <ArticleTab articleData={props.articleData} style={{width:'80%',color:'100%'}}/>
             )}
         </div>
     )
